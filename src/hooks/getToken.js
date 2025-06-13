@@ -1,4 +1,4 @@
-
+//Getting token from my client
 
   export async function getToken() {
     const clientId = 'sandbox-energetic-sail-904';
