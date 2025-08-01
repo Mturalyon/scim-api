@@ -5,7 +5,8 @@ const app = express();
 app.get('/api/user', (req, res) => {
   res.json({ 
     name: 'Marius Sæteraas',
-    id: "e5e499e0-e109-4dab-a016-a3dd16868c30"
+    id: "e5e499e0-e109-4dab-a016-a3dd16868c30",
+    email: "marsat@signicat.com"
    });
 });
 

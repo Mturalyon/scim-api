@@ -2,7 +2,7 @@ import { getToken } from "./getToken";
 
 export async function getUsers() {
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; //https://cors-anywhere.herokuapp.com/corsdemo go here and request temp. access.
-    const targetUrl = 'https://api.signicat.com/ciam/api/scim/v2/Users/e5e499e0-e109-4dab-a016-a3dd16868c30';
+    const targetUrl = 'https://api.signicat.com/ownidp/api/scim/v2/Users/e5e499e0-e109-4dab-a016-a3dd16868c30';
     const token = await getToken();
 
     const response = await fetch(proxyUrl + targetUrl, {
