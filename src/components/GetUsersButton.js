@@ -15,13 +15,13 @@ function GetUsersButton() {
       const data = await getUsers();
       console.log(data)
 
-      if (data.emails[0].value) {
-        setEmailActive(data.emails[0].value);
+      if (data.Resources[0].emails[0].value) {
+        setEmailActive(data.Resources[0].emails[0].value);
       } else {
         setEmailActive("No Email");
       }
 
-      setUser(data);
+      setUser(data.Resources[0]);
     } catch (error) {
       setError(error);
     } finally {
@@ -33,7 +33,7 @@ function GetUsersButton() {
 
   return (
     <div>
-      <button onClick={handleClick} disabled={loading}>
+      <button onClick={handleClick} disabled={loading} style={{marginBottom: "20px"}}>
         {loading ? 'Loading...' : 'Get User'}
       </button>
 
